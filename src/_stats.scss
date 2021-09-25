@@ -44,10 +44,10 @@
     margin-block-start: 3em;
   }
 
-  /* &:focus,
+  &:focus,
   &:hover {
     background-color: var(--hover-blue);
-  } */
+  }
 
   &::before {
     position: absolute;
