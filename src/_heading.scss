@@ -1,0 +1,30 @@
+@use './variables';
+
+.heading {
+  &__details {
+    background-color: var(--blue);
+  }
+
+  &__image {
+    width: 4em;
+    border: 3px solid white;
+    border-radius: 50%;
+  }
+
+  &__header {
+    font-size: 0.9375rem;
+    color: var(--pale-blue);
+  }
+
+  &__name {
+    font-size: 1.5rem;
+    font-weight: 300;
+    color: white;
+  }
+
+  &__time {
+    background-color: var(--dark-blue);
+    font-size: 1.125rem;
+    color: var(--desaturated-blue);
+  }
+}
