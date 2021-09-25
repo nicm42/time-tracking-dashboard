@@ -44,10 +44,10 @@
     margin-block-start: 3em;
   }
 
-  &:focus,
+  /* &:focus,
   &:hover {
     background-color: var(--hover-blue);
-  }
+  } */
 
   &::before {
     position: absolute;
@@ -70,6 +70,15 @@
     grid-area: title;
     font-size: 1.125rem;
     font-weight: 500;
+  }
+
+  & button {
+    font-size: 1rem;
+
+    &:hover svg path,
+    &:focus svg path {
+      fill: white;
+    }
   }
 
   &__dots {
