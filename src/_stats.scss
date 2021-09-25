@@ -30,6 +30,7 @@
   padding: 1.75em 1.5em;
   background-color: var(--dark-blue);
   border-radius: var(--border-radius);
+  cursor: pointer;
 
   @include breakpoints.breakpoint-up(large) {
     --stats-gap: 5em;
@@ -41,6 +42,11 @@
       'previous previous';
     column-gap: 0.5em;
     margin-block-start: 3em;
+  }
+
+  &:focus,
+  &:hover {
+    background-color: var(--hover-blue);
   }
 
   &::before {
