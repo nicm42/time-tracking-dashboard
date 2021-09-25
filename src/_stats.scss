@@ -1,0 +1,21 @@
+.stats {
+  margin-block-start: 1.5em;
+  padding: 1.5em;
+  background-color: var(--dark-blue);
+  border-radius: 0.9375rem;
+
+  &__title {
+    font-size: 1.125rem;
+    font-weight: 500;
+  }
+
+  &__number {
+    font-size: 2rem;
+    font-weight: 300;
+  }
+
+  &__previous {
+    font-size: 0.9375rem;
+    color: var(--pale-blue);
+  }
+}
