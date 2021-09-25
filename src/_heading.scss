@@ -1,4 +1,4 @@
-@use './variables';
+@use './breakpoints';
 
 .heading {
   &__details {
@@ -10,6 +10,10 @@
     border-radius: 0.9375rem;
     background-color: var(--blue);
     z-index: 2;
+
+    @include breakpoints.breakpoint-up(large) {
+      display: block;
+    }
   }
 
   &__image {
@@ -21,6 +25,10 @@
   &__header {
     font-size: 0.9375rem;
     color: var(--pale-blue);
+
+    @include breakpoints.breakpoint-up(large) {
+      margin-block-start: 2em;
+    }
   }
 
   &__name {
@@ -43,6 +51,11 @@
     margin: 0;
     padding: 0;
     list-style-type: none;
+
+    @include breakpoints.breakpoint-up(large) {
+      flex-direction: column;
+      line-height: 3;
+    }
   }
 
   &__time {
