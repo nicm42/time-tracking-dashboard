@@ -70,6 +70,10 @@
     padding: 0;
     list-style-type: none;
 
+    @include breakpoints.breakpoint-up(medium) {
+      justify-content: flex-start;
+    }
+
     @include breakpoints.breakpoint-up(large) {
       flex-direction: column;
       line-height: 3;
@@ -78,5 +82,9 @@
 
   &__time {
     display: inline;
+
+    @include breakpoints.breakpoint-up(medium) {
+      padding-inline-end: 2em;
+    }
   }
 }
