@@ -13,6 +13,7 @@
 
     @include breakpoints.breakpoint-up(large) {
       display: block;
+      max-width: 16em;
     }
   }
 
