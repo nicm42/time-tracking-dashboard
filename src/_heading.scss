@@ -1,9 +1,13 @@
 @use './variables';
 
 .heading {
+  margin-bottom: 2em;
   &__details {
     position: relative;
-    padding: 2em;
+    display: flex;
+    align-items: center;
+    gap: 1em;
+    padding: 1.65em;
     border-radius: 0.9375rem;
     background-color: var(--blue);
     z-index: 2;
@@ -23,15 +27,28 @@
   &__name {
     font-size: 1.5rem;
     font-weight: 300;
+    line-height: 1.5;
     color: white;
   }
 
-  &__time {
+  &__timesection {
     margin-block-start: -1em;
-    padding: 2em;
+    padding: 1.5em;
     padding-block-start: 3em;
     background-color: var(--dark-blue);
     font-size: 1.125rem;
     color: var(--desaturated-blue);
+  }
+
+  &__times {
+    display: flex;
+    justify-content: space-between;
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+  }
+
+  &__time {
+    display: inline;
   }
 }
