@@ -17,11 +17,13 @@
   border-radius: 0.9375rem;
 
   @include breakpoints.breakpoint-up(large) {
-    grid-template-rows: repeat(3, 1fr);
+    grid-template-rows: 1fr 0.15fr 1fr 1fr;
     grid-template-areas:
       'title dots'
+      '. . '
       'number number'
       'previous previous';
+    gap: 0.5em;
   }
 
   &::before {
@@ -51,6 +53,10 @@
     grid-area: number;
     font-size: 2rem;
     font-weight: 300;
+
+    @include breakpoints.breakpoint-up(large) {
+      font-size: 3.5em;
+    }
   }
 
   &__previous {

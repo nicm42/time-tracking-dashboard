@@ -20,6 +20,10 @@
     width: 4em;
     border: 3px solid white;
     border-radius: 50%;
+
+    @include breakpoints.breakpoint-up(large) {
+      width: 4.875em;
+    }
   }
 
   &__header {
@@ -36,6 +40,10 @@
     font-weight: 300;
     line-height: 1.5;
     color: white;
+
+    @include breakpoints.breakpoint-up(large) {
+      font-size: 2.5rem;
+    }
   }
 
   &__timesection {
@@ -43,6 +51,7 @@
     padding: 1.5em;
     padding-block-start: 3em;
     background-color: var(--dark-blue);
+    font-size: 1.125em;
   }
 
   &__times {
