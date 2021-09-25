@@ -1,11 +1,12 @@
 .stats {
+  --stats-gap: 4em;
   position: relative;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   grid-template-rows: repeat(2, 1fr);
   gap: 0.375em;
   align-items: center;
-  margin-block-start: 3em;
+  margin-block-start: var(--stats-gap);
   padding: 1.75em 1.5em;
   background-color: var(--dark-blue);
   border-radius: 0.9375rem;
@@ -14,9 +15,11 @@
     position: absolute;
     content: '';
     inset: 0;
-    inset-block-start: -1.75em;
-    height: 3.375em;
+    inset-block-start: -2.5em;
+    height: var(--stats-gap);
     border-radius: 0.9375rem;
+    background-repeat: no-repeat;
+    background-position: 95% top;
     z-index: -1;
   }
 
@@ -43,24 +46,32 @@
 
 .work::before {
   background-color: var(--work-colour);
+  background-image: url(../images/icon-work.svg);
+  background-repeat: no-repeat;
+  background-position: 95%;
 }
 
 .play::before {
   background-color: var(--play-colour);
+  background-image: url(../images/icon-play.svg);
 }
 
 .study::before {
   background-color: var(--study-colour);
+  background-image: url(../images/icon-study.svg);
 }
 
 .exercise::before {
   background-color: var(--exercise-colour);
+  background-image: url(../images/icon-exercise.svg);
 }
 
 .social::before {
   background-color: var(--social-colour);
+  background-image: url(../images/icon-social.svg);
 }
 
 .self-care::before {
   background-color: var(--self-care-colour);
+  background-image: url(../images/icon-self-care.svg);
 }
