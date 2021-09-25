@@ -23,7 +23,7 @@
   margin-block-start: var(--stats-gap);
   padding: 1.75em 1.5em;
   background-color: var(--dark-blue);
-  border-radius: 0.9375rem;
+  border-radius: var(--border-radius);
 
   @include breakpoints.breakpoint-up(large) {
     grid-template-rows: auto 0.15fr 1fr auto;
@@ -42,7 +42,7 @@
     inset: 0;
     inset-block-start: -2.5em;
     height: var(--stats-gap);
-    border-radius: 0.9375rem;
+    border-radius: var(--border-radius);
     background-repeat: no-repeat;
     background-position: 95% top;
     z-index: -1;
