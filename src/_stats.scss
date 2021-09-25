@@ -5,7 +5,7 @@
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: repeat(2, 1fr);
-    gap: 1.875em;
+    gap: 2em;
   }
 }
 
@@ -20,12 +20,13 @@
     'number previous';
   gap: 0.375em;
   align-items: center;
-  margin-block-start: var(--stats-gap);
+  margin-block-start: 4em;
   padding: 1.75em 1.5em;
   background-color: var(--dark-blue);
   border-radius: var(--border-radius);
 
   @include breakpoints.breakpoint-up(large) {
+    --stats-gap: 5em;
     grid-template-rows: auto 0.15fr 1fr auto;
     grid-template-areas:
       'title dots'
@@ -33,7 +34,7 @@
       'number number'
       'previous previous';
     column-gap: 0.5em;
-    margin-block-start: 2em;
+    margin-block-start: 3em;
   }
 
   &::before {
@@ -44,8 +45,13 @@
     height: var(--stats-gap);
     border-radius: var(--border-radius);
     background-repeat: no-repeat;
-    background-position: 95% top;
+    background-position: 95% 40%;
     z-index: -1;
+
+    @include breakpoints.breakpoint-up(large) {
+      inset-block-start: -3em;
+      background-position: 90% 40%;
+    }
   }
 
   &__title {
@@ -85,8 +91,6 @@
 .work::before {
   background-color: var(--work-colour);
   background-image: url(../images/icon-work.svg);
-  background-repeat: no-repeat;
-  background-position: 95%;
 }
 
 .play::before {
