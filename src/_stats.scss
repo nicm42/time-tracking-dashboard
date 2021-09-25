@@ -1,13 +1,24 @@
 .stats {
-  margin-block-start: 1.5em;
-  padding: 1.75em 1.5em;
+  position: relative;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   grid-template-rows: repeat(2, 1fr);
   gap: 0.375em;
   align-items: center;
+  margin-block-start: 3em;
+  padding: 1.75em 1.5em;
   background-color: var(--dark-blue);
   border-radius: 0.9375rem;
+
+  &::before {
+    position: absolute;
+    content: '';
+    inset: 0;
+    inset-block-start: -1.75em;
+    height: 3.375em;
+    border-radius: 0.9375rem;
+    z-index: -1;
+  }
 
   &__title {
     font-size: 1.125rem;
@@ -28,4 +39,28 @@
     font-size: 0.9375rem;
     color: var(--pale-blue);
   }
+}
+
+.work::before {
+  background-color: var(--work-colour);
+}
+
+.play::before {
+  background-color: var(--play-colour);
+}
+
+.study::before {
+  background-color: var(--study-colour);
+}
+
+.exercise::before {
+  background-color: var(--exercise-colour);
+}
+
+.social::before {
+  background-color: var(--social-colour);
+}
+
+.self-care::before {
+  background-color: var(--self-care-colour);
 }
