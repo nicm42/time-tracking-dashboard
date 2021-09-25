@@ -2,7 +2,11 @@
 
 .heading {
   &__details {
+    position: relative;
+    padding: 2em;
+    border-radius: 0.9375rem;
     background-color: var(--blue);
+    z-index: 2;
   }
 
   &__image {
@@ -23,6 +27,9 @@
   }
 
   &__time {
+    margin-block-start: -1em;
+    padding: 2em;
+    padding-block-start: 3em;
     background-color: var(--dark-blue);
     font-size: 1.125rem;
     color: var(--desaturated-blue);
