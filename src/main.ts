@@ -37,6 +37,8 @@ const setData = (time: string): void => {
 
 buttons.forEach((button) => {
   button.addEventListener('click', () => {
+    buttons.forEach((time) => time.classList.remove('active'));
+    button.classList.add('active');
     setData(button.id);
   });
 });
