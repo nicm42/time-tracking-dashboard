@@ -15,6 +15,13 @@ img {
   height: auto;
 }
 
+h1,
+h2,
+p {
+  margin: 0;
+  padding: 0;
+}
+
 main {
   @include breakpoints.breakpoint-up(large) {
     display: grid;
