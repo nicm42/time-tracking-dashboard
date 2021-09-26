@@ -73,6 +73,7 @@
   }
 
   & button {
+    justify-self: end;
     font-size: 1rem;
 
     &:hover svg path,
