@@ -1,0 +1,25 @@
+@use './variables';
+@use './breakpoints';
+
+body {
+  padding: 5.0625em 1.5em;
+  background-color: var(--very-dark-blue);
+  font-size: 100%;
+  font-family: var(--font-family);
+  line-height: 1;
+  color: white;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+main {
+  @include breakpoints.breakpoint-up(large) {
+    display: grid;
+    grid-template-columns: repeat(2, auto);
+    gap: 1.875em;
+    place-content: center;
+  }
+}

@@ -12,11 +12,19 @@
       href="./images/favicon-32x32.png"
     />
 
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500&display=swap"
+      rel="stylesheet"
+    />
+
     <title>Frontend Mentor | Time tracking dashboard</title>
 
     <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
     <style>
       .attribution {
+        margin-block-start: 1.5em;
         font-size: 11px;
         text-align: center;
       }
@@ -26,89 +34,164 @@
     </style>
   </head>
   <body>
-    Report for Jeremy Robson Daily Weekly Monthly Work 5hrs
-    <!-- daily -->
-    Previous - 7hrs
-    <!-- daily -->
-    32hrs
-    <!-- weekly -->
-    Previous - 36hrs
-    <!-- weekly -->
-    103hrs
-    <!-- monthly -->
-    Previous - 128hrs
-    <!-- monthly -->
+    <main>
+      <section class="heading">
+        <div class="heading__details">
+          <img
+            class="heading__image"
+            src="images/image-jeremy.png"
+            alt="Jeremy Robson photo"
+            width="234"
+            height="234"
+          />
+          <div class="heading__header">
+            Report for
+            <div class="heading__name">Jeremy Robson</div>
+          </div>
+        </div>
+        <div class="heading__timesection">
+          <ul class="heading__times">
+            <li class="heading__time">
+              <button class="button" id="daily">Daily</button>
+            </li>
+            <li class="heading__time">
+              <button class="button active" id="weekly">Weekly</button>
+            </li>
+            <li class="heading__time">
+              <button class="button" id="monthly">Monthly</button>
+            </li>
+          </ul>
+        </div>
+      </section>
 
-    Play 1hr
-    <!-- daily -->
-    Previous - 2hrs
-    <!-- daily -->
-    10hrs
-    <!-- weekly -->
-    Previous - 8hrs
-    <!-- weekly -->
-    23hrs
-    <!-- monthly -->
-    Previous - 29hrs
-    <!-- monthly -->
+      <section class="stats-section">
+        <div class="stats work" tabindex="0">
+          <div class="stats__title"></div>
+          <button>
+            <svg
+              class="stats__dots"
+              width="21"
+              height="5"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M2.5 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Zm8 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Zm8 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Z"
+                fill="#BBC0FF"
+                fill-rule="evenodd"
+              />
+            </svg>
+          </button>
+          <div class="stats__number"></div>
+          <div class="stats__previous"></div>
+        </div>
 
-    Study 0hrs
-    <!-- daily -->
-    Previous - 1hr
-    <!-- daily -->
-    4hrs
-    <!-- weekly -->
-    Previous - 7hrs
-    <!-- weekly -->
-    13hrs
-    <!-- monthly -->
-    Previous - 19hrs
-    <!-- monthly -->
+        <div class="stats play" tabindex="0">
+          <div class="stats__title"></div>
+          <button>
+            <svg
+              class="stats__dots"
+              width="21"
+              height="5"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M2.5 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Zm8 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Zm8 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Z"
+                fill="#BBC0FF"
+                fill-rule="evenodd"
+              />
+            </svg>
+          </button>
+          <div class="stats__number"></div>
+          <div class="stats__previous"></div>
+        </div>
 
-    Exercise 1hr
-    <!-- daily -->
-    Previous - 1hr
-    <!-- daily -->
-    4hrs
-    <!-- weekly -->
-    Previous - 5hrs
-    <!-- weekly -->
-    11hrs
-    <!-- monthly -->
-    Previous - 18hrs
-    <!-- monthly -->
+        <div class="stats study" tabindex="0">
+          <div class="stats__title"></div>
+          <button>
+            <svg
+              class="stats__dots"
+              width="21"
+              height="5"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M2.5 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Zm8 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Zm8 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Z"
+                fill="#BBC0FF"
+                fill-rule="evenodd"
+              />
+            </svg>
+          </button>
+          <div class="stats__number"></div>
+          <div class="stats__previous"></div>
+        </div>
 
-    Social 1hr
-    <!-- daily -->
-    Previous - 3hrs
-    <!-- daily -->
-    5hrs
-    <!-- weekly -->
-    Previous - 10hrs
-    <!-- weekly -->
-    21hrs
-    <!-- monthly -->
-    Previous - 23hrs
-    <!-- monthly -->
+        <div class="stats exercise" tabindex="0">
+          <div class="stats__title"></div>
+          <button>
+            <svg
+              class="stats__dots"
+              width="21"
+              height="5"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M2.5 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Zm8 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Zm8 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Z"
+                fill="#BBC0FF"
+                fill-rule="evenodd"
+              />
+            </svg>
+          </button>
+          <div class="stats__number"></div>
+          <div class="stats__previous"></div>
+        </div>
 
-    Self Care 0hrs
-    <!-- daily -->
-    Previous - 1hr
-    <!-- daily -->
-    2hrs
-    <!-- weekly -->
-    Previous - 2hrs
-    <!-- weekly -->
-    7hrs
-    <!-- monthly -->
-    Previous - 11hrs
-    <!-- monthly -->
+        <div class="stats social" tabindex="0">
+          <div class="stats__title"></div>
+          <button>
+            <svg
+              class="stats__dots"
+              width="21"
+              height="5"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M2.5 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Zm8 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Zm8 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Z"
+                fill="#BBC0FF"
+                fill-rule="evenodd"
+              />
+            </svg>
+          </button>
+          <div class="stats__number"></div>
+          <div class="stats__previous"></div>
+        </div>
+
+        <div class="stats self-care" tabindex="0">
+          <div class="stats__title"></div>
+          <button>
+            <svg
+              class="stats__dots"
+              width="21"
+              height="5"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M2.5 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Zm8 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Zm8 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Z"
+                fill="#BBC0FF"
+                fill-rule="evenodd"
+              />
+            </svg>
+          </button>
+          <div class="stats__number"></div>
+          <div class="stats__previous"></div>
+        </div>
+      </section>
+    </main>
 
     <div class="attribution">
       Challenge by
       <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
         >Frontend Mentor</a
-      >. Coded by <a href="#">Your Name Here</a>.
+      >. Coded by <a href="https://github.com/nicm42">Nic</a>.
     </div>
 
     <script type="module" src="/src/main.ts"></script>

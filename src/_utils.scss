@@ -1,0 +1,16 @@
+button {
+  background-color: transparent;
+  border: none;
+  font-size: 1.125rem;
+  color: var(--desaturated-blue);
+  cursor: pointer;
+
+  &:focus,
+  &:hover {
+    color: white;
+  }
+
+  &.active {
+    color: white;
+  }
+}

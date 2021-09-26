@@ -1,0 +1,141 @@
+@use './breakpoints';
+
+.stats-section {
+  @include breakpoints.breakpoint-up(medium) {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    gap: 1em;
+  }
+
+  @include breakpoints.breakpoint-up(medium-large) {
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    gap: 2em;
+  }
+}
+
+.stats {
+  --stats-gap: 4em;
+  position: relative;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  grid-template-areas:
+    'title dots'
+    'number previous';
+  gap: 0.375em;
+  align-items: center;
+  margin-block-start: 4em;
+  padding: 1.75em 1.5em;
+  background-color: var(--dark-blue);
+  border-radius: var(--border-radius);
+  cursor: pointer;
+
+  @include breakpoints.breakpoint-up(large) {
+    --stats-gap: 5em;
+    grid-template-rows: auto 0.15fr 1fr auto;
+    grid-template-areas:
+      'title dots'
+      '. . '
+      'number number'
+      'previous previous';
+    column-gap: 0.5em;
+    margin-block-start: 3em;
+  }
+
+  &:focus,
+  &:hover {
+    background-color: var(--hover-blue);
+  }
+
+  &::before {
+    position: absolute;
+    content: '';
+    inset: 0;
+    inset-block-start: -2.5em;
+    height: var(--stats-gap);
+    border-radius: var(--border-radius);
+    background-repeat: no-repeat;
+    background-position: 95% 40%;
+    z-index: -1;
+
+    @include breakpoints.breakpoint-up(large) {
+      inset-block-start: -3em;
+      background-position: 90% 40%;
+    }
+  }
+
+  &__title {
+    grid-area: title;
+    font-size: 1.125rem;
+    font-weight: 500;
+  }
+
+  & button {
+    justify-self: end;
+    font-size: 1rem;
+
+    &:hover svg path,
+    &:focus svg path {
+      fill: white;
+    }
+  }
+
+  &__dots {
+    grid-area: dots;
+    justify-self: end;
+  }
+
+  &__number {
+    grid-area: number;
+    font-size: 2rem;
+    font-weight: 300;
+
+    @include breakpoints.breakpoint-up(large) {
+      font-size: 3.5em;
+    }
+  }
+
+  &__previous {
+    grid-area: previous;
+    justify-self: end;
+    font-size: 0.9375rem;
+    color: var(--pale-blue);
+    text-align: right; // so it looks better when it goes over two lines
+
+    @include breakpoints.breakpoint-up(large) {
+      justify-self: start;
+    }
+  }
+}
+
+.work::before {
+  background-color: var(--work-colour);
+  background-image: url(../images/icon-work.svg);
+}
+
+.play::before {
+  background-color: var(--play-colour);
+  background-image: url(../images/icon-play.svg);
+}
+
+.study::before {
+  background-color: var(--study-colour);
+  background-image: url(../images/icon-study.svg);
+}
+
+.exercise::before {
+  background-color: var(--exercise-colour);
+  background-image: url(../images/icon-exercise.svg);
+}
+
+.social::before {
+  background-color: var(--social-colour);
+  background-image: url(../images/icon-social.svg);
+}
+
+.self-care::before {
+  background-color: var(--self-care-colour);
+  background-image: url(../images/icon-self-care.svg);
+}
