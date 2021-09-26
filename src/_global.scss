@@ -1,8 +1,13 @@
 @use './variables';
 @use './breakpoints';
 
+html {
+  height: 100%;
+}
+
 body {
-  padding: 5.0625em 1.5em;
+  height: 95%; // 100% adds a scrollbar
+  padding-inline: 1.5em;
   background-color: var(--very-dark-blue);
   font-size: 100%;
   font-family: var(--font-family);
@@ -23,10 +28,14 @@ p {
 }
 
 main {
+  display: grid;
+  place-content: center;
+  padding-block: 5.0625em;
+
   @include breakpoints.breakpoint-up(large) {
-    display: grid;
     grid-template-columns: repeat(2, auto);
     gap: 1.875em;
-    place-content: center;
+    height: 100%;
+    padding-block: 0;
   }
 }
