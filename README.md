@@ -30,7 +30,7 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [TBC](TBC)
+- Solution URL: [https://www.frontendmentor.io/solutions/scss-typescript-vite-UZi8eOATm](https://www.frontendmentor.io/solutions/scss-typescript-vite-UZi8eOATm)
 - Live Site URL: [https://time-tracking-dashboard.pages.dev/](https://time-tracking-dashboard.pages.dev/)
 
 ## My process
